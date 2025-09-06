@@ -1,0 +1,61 @@
+# PHP
+*.log
+*.tmp
+*.cache
+
+# Database
+*.sql
+*.db
+*.sqlite
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+debug.log
+
+# Uploads (optional - you might want to track some default images)
+# Uncomment the line below if you don't want to track uploaded files
+# pizza_delivery/public/uploads/food/*
+# !pizza_delivery/public/uploads/food/default-food.*
+
+# Temporary files
+tmp/
+temp/
+
+# Cookie files
+*cookies.txt
+
+# PHP session files
+sess_*
+
+# Composer
+vendor/
+composer.lock
+
+# Node modules (if you use any)
+node_modules/
+
+# Cache
+cache/
+*.cache

@@ -1,0 +1,689 @@
+/* 
+ * Pizza Delivery Website - Main Stylesheet
+ * Color Scheme:
+ * Background Charcoal: #2F3234
+ * Text and Elements White: #F9FBF7
+ * Accent Gold: #CFB54F
+ * Call-to-Action Red: #B40614
+ * Accent Green: #34912A (for fresh toppings)
+ */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #F9FBF7;
+    background-color: #2F3234;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Custom color classes */
+.text-gold {
+    color: #CFB54F !important;
+}
+
+.text-red {
+    color: #B40614 !important;
+}
+
+.text-green {
+    color: #34912A !important;
+}
+
+.bg-charcoal {
+    background-color: #2F3234 !important;
+}
+
+.bg-gold {
+    background-color: #CFB54F !important;
+}
+
+.bg-red {
+    background-color: #B40614 !important;
+}
+
+.bg-green {
+    background-color: #34912A !important;
+}
+
+/* Navigation */
+.navbar-dark {
+    background-color: #2F3234 !important;
+    border-bottom: 2px solid #CFB54F;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #CFB54F !important;
+}
+
+.navbar-nav .nav-link {
+    color: #F9FBF7 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #CFB54F !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #CFB54F !important;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    background-color: #2F3234;
+    border: 1px solid #CFB54F;
+}
+
+.dropdown-item {
+    color: #F9FBF7 !important;
+}
+
+.dropdown-item:hover {
+    background-color: #CFB54F;
+    color: #2F3234 !important;
+}
+
+.cart-count {
+    display: inline-block;
+    background-color: #B40614;
+    color: #F9FBF7;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(47, 50, 52, 0.8), rgba(47, 50, 52, 0.8)), url('/PizzaWebsite/pizza_delivery/assets/images/pizza-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #F9FBF7;
+    padding: 100px 0;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #CFB54F;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #F9FBF7;
+}
+
+.hero-section .btn-primary {
+    background-color: #B40614;
+    border-color: #B40614;
+    color: #F9FBF7;
+    font-weight: 600;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #8B0510;
+    border-color: #8B0510;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(180, 6, 20, 0.3);
+}
+
+/* Food Menu */
+.menu-section {
+    background-color: #2F3234;
+    color: #F9FBF7;
+}
+
+.menu-section h2 {
+    color: #CFB54F;
+    font-weight: bold;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #CFB54F;
+}
+
+.nav-tabs .nav-link {
+    background-color: transparent;
+    border: 2px solid #CFB54F;
+    color: #F9FBF7;
+    margin-right: 10px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: #CFB54F;
+    color: #2F3234;
+    border-color: #CFB54F;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #CFB54F;
+    color: #2F3234;
+    border-color: #CFB54F;
+}
+
+.food-item {
+    transition: transform 0.3s;
+    margin-bottom: 30px;
+    height: 100%;
+}
+
+.food-item:hover {
+    transform: translateY(-8px);
+}
+
+.food-item .card {
+    height: 100%;
+    border: 2px solid #CFB54F;
+    box-shadow: 0 4px 12px rgba(207, 181, 79, 0.2);
+    background-color: #3A3D3F;
+    color: #F9FBF7;
+}
+
+.food-item .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #CFB54F;
+}
+
+.placeholder-img {
+    height: 200px;
+    background-color: #2F3234;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #CFB54F;
+    border-bottom: 1px solid #CFB54F;
+}
+
+.food-item .card-title {
+    font-weight: bold;
+    color: #CFB54F;
+}
+
+.food-item .description {
+    color: #F9FBF7;
+    font-size: 0.9rem;
+}
+
+.food-item .price {
+    font-weight: bold;
+    color: #34912A;
+    font-size: 1.3rem;
+}
+
+.add-to-cart-btn {
+    background-color: #B40614;
+    border-color: #B40614;
+    color: #F9FBF7;
+    font-weight: 600;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #8B0510;
+    border-color: #8B0510;
+    transform: translateY(-2px);
+}
+
+.category-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #34912A;
+    color: #F9FBF7;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.category-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #34912A;
+    color: #F9FBF7;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Cart Page */
+.cart-table {
+    background-color: #3A3D3F;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cart-table th {
+    background-color: #CFB54F;
+    color: #2F3234;
+    font-weight: 600;
+    border: none;
+}
+
+.cart-table td {
+    background-color: #3A3D3F;
+    color: #F9FBF7;
+    border-color: #CFB54F;
+}
+
+.cart-table img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #CFB54F;
+    background-color: #CFB54F;
+    color: #2F3234;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.quantity-control button:hover {
+    background-color: #B8A045;
+}
+
+.quantity-control input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #CFB54F;
+    background-color: #2F3234;
+    color: #F9FBF7;
+    margin: 0 5px;
+}
+
+.remove-from-cart {
+    background-color: #B40614;
+    border-color: #B40614;
+    color: #F9FBF7;
+}
+
+.remove-from-cart:hover {
+    background-color: #8B0510;
+    border-color: #8B0510;
+}
+
+/* Order History */
+.order-card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(207, 181, 79, 0.2);
+    background-color: #3A3D3F;
+    border: 2px solid #CFB54F;
+    border-radius: 8px;
+}
+
+.order-header {
+    background-color: #CFB54F;
+    color: #2F3234;
+    padding: 15px;
+    border-bottom: 1px solid #CFB54F;
+    font-weight: 600;
+}
+
+.order-items {
+    color: #F9FBF7;
+}
+
+.order-items img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-pending {
+    background-color: #CFB54F;
+    color: #2F3234;
+}
+
+.status-confirmed {
+    background-color: #34912A;
+    color: #F9FBF7;
+}
+
+.status-delivered {
+    background-color: #34912A;
+    color: #F9FBF7;
+}
+
+.status-cancelled {
+    background-color: #B40614;
+    color: #F9FBF7;
+}
+
+/* Forms */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #3A3D3F;
+    color: #F9FBF7;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(207, 181, 79, 0.2);
+    border: 2px solid #CFB54F;
+}
+
+.form-container h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #CFB54F;
+    font-weight: 600;
+}
+
+.form-label {
+    color: #F9FBF7;
+    font-weight: 500;
+}
+
+.form-control {
+    background-color: #2F3234;
+    border: 2px solid #CFB54F;
+    color: #F9FBF7;
+}
+
+.form-control:focus {
+    background-color: #2F3234;
+    border-color: #CFB54F;
+    color: #F9FBF7;
+    box-shadow: 0 0 0 0.2rem rgba(207, 181, 79, 0.25);
+}
+
+.form-control::placeholder {
+    color: #B0B3B5;
+}
+
+.form-select {
+    background-color: #2F3234;
+    border: 2px solid #CFB54F;
+    color: #F9FBF7;
+}
+
+.form-select:focus {
+    background-color: #2F3234;
+    border-color: #CFB54F;
+    color: #F9FBF7;
+    box-shadow: 0 0 0 0.2rem rgba(207, 181, 79, 0.25);
+}
+
+.btn-primary {
+    background-color: #B40614;
+    border-color: #B40614;
+    color: #F9FBF7;
+    font-weight: 600;
+    padding: 12px 24px;
+}
+
+.btn-primary:hover {
+    background-color: #8B0510;
+    border-color: #8B0510;
+    color: #F9FBF7;
+}
+
+.btn-secondary {
+    background-color: #CFB54F;
+    border-color: #CFB54F;
+    color: #2F3234;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background-color: #B8A045;
+    border-color: #B8A045;
+    color: #2F3234;
+}
+
+.btn-success {
+    background-color: #34912A;
+    border-color: #34912A;
+    color: #F9FBF7;
+}
+
+.btn-success:hover {
+    background-color: #2A7321;
+    border-color: #2A7321;
+}
+
+.alert-danger {
+    background-color: rgba(180, 6, 20, 0.1);
+    border-color: #B40614;
+    color: #F9FBF7;
+}
+
+.alert-success {
+    background-color: rgba(52, 145, 42, 0.1);
+    border-color: #34912A;
+    color: #F9FBF7;
+}
+
+/* Admin Dashboard */
+.dashboard-stats {
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: #3A3D3F;
+    border: 2px solid #CFB54F;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(207, 181, 79, 0.2);
+    text-align: center;
+    height: 100%;
+    color: #F9FBF7;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #CFB54F;
+}
+
+.stat-card h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #34912A;
+}
+
+.stat-card p {
+    color: #F9FBF7;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.card {
+    background-color: #3A3D3F;
+    border: 2px solid #CFB54F;
+    color: #F9FBF7;
+}
+
+.card-header {
+    background-color: #CFB54F;
+    color: #2F3234;
+    font-weight: 600;
+    border-bottom: 2px solid #CFB54F;
+}
+
+.table {
+    color: #F9FBF7;
+}
+
+.table th {
+    background-color: #CFB54F;
+    color: #2F3234;
+    border-color: #CFB54F;
+}
+
+.table td {
+    border-color: #CFB54F;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(207, 181, 79, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #2F3234 !important;
+    border-top: 2px solid #CFB54F;
+    color: #F9FBF7;
+}
+
+footer h5 {
+    color: #CFB54F;
+    font-weight: 600;
+}
+
+footer a {
+    color: #F9FBF7 !important;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #CFB54F !important;
+}
+
+/* Additional Bootstrap Overrides */
+.btn-outline-secondary {
+    border-color: #CFB54F;
+    color: #CFB54F;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #CFB54F;
+    border-color: #CFB54F;
+    color: #2F3234;
+}
+
+.btn-info {
+    background-color: #CFB54F;
+    border-color: #CFB54F;
+    color: #2F3234;
+}
+
+.btn-info:hover {
+    background-color: #B8A045;
+    border-color: #B8A045;
+    color: #2F3234;
+}
+
+.input-group-text {
+    background-color: #CFB54F;
+    border-color: #CFB54F;
+    color: #2F3234;
+}
+
+.text-center a {
+    color: #CFB54F;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    color: #B8A045;
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    border-color: #CFB54F;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(35%) saturate(318%) hue-rotate(15deg) brightness(95%) contrast(89%);
+}
+
+/* Form check inputs */
+.form-check-input:checked {
+    background-color: #34912A;
+    border-color: #34912A;
+}
+
+.form-check-input:focus {
+    border-color: #CFB54F;
+    box-shadow: 0 0 0 0.25rem rgba(207, 181, 79, 0.25);
+}
+
+.form-check-label {
+    color: #F9FBF7;
+}
+
+/* Custom styling for food categories */
+.nav-tabs .nav-item {
+    margin-right: 5px;
+}
+
+.tab-content {
+    padding-top: 30px;
+}
+
+/* Social icons styling */
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #CFB54F;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #CFB54F;
+    color: #2F3234 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .food-item .card-img-top {
+        height: 150px;
+    }
+    
+    .form-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
