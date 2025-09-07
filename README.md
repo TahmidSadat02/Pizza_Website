@@ -1,6 +1,6 @@
-# 🍕 Pizza Delivery Website
+# 🍕 PizzaBurg Website
 
-A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap. Features a beautiful dark theme with gold accents and complete order management system.
+A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap. Features a beautiful GoMeal-inspired design with orange/yellow gradients and complete order management system.
 
 ## 🌟 Features
 
@@ -22,18 +22,19 @@ A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap
 ## 🎨 Design
 
 ### Color Scheme
-- **Background Charcoal**: `#2F3234` - Professional dark theme
-- **Text White**: `#F9FBF7` - High contrast readability
-- **Accent Gold**: `#CFB54F` - Premium branding elements
-- **Call-to-Action Red**: `#B40614` - Conversion-focused buttons
-- **Fresh Green**: `#34912A` - Food pricing and success states
+- **Primary Orange**: `#FFA500` - Main brand color and buttons
+- **Secondary Yellow**: `#FFD700` - Gradient accents and highlights
+- **Background White**: `#FFFFFF` - Clean, modern background
+- **Text Dark**: `#333333` - High contrast readability
+- **Success Green**: `#10B981` - Success states and confirmations
 
 ### UI/UX Highlights
-- Modern dark theme with gold accents
+- Modern GoMeal-inspired three-column layout
+- Orange/yellow gradient theme with clean whites
 - Smooth hover animations and transitions
 - Mobile-first responsive design
-- Intuitive navigation and user flow
-- Professional food presentation
+- Intuitive sidebar navigation
+- Professional food presentation with ratings
 
 ## 🛠️ Technology Stack
 

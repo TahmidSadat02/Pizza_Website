@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <h5>Pizza Delivery</h5>
+                    <h5>PizzaBurg</h5>
                     <p>Delicious food delivered fast to your doorstep. Order online for the best pizza experience!</p>
                 </div>
                 <div class="col-md-4 mb-3">
@@ -27,7 +27,7 @@
                     <address>
                         <i class="fas fa-map-marker-alt me-2"></i> 123 Pizza Street, Food City<br>
                         <i class="fas fa-phone me-2"></i> (123) 456-7890<br>
-                        <i class="fas fa-envelope me-2"></i> info@pizzadelivery.com
+                        <i class="fas fa-envelope me-2"></i> info@pizzaburg.com
                     </address>
                     <div class="social-icons mt-2">
                         <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
@@ -38,7 +38,7 @@
             </div>
             <hr>
             <div class="text-center">
-                <p class="mb-0">&copy; <?php echo date('Y'); ?> Pizza Delivery. All rights reserved.</p>
+                <p class="mb-0">&copy; <?php echo date('Y'); ?> PizzaBurg. All rights reserved.</p>
             </div>
         </div>
     </footer>
