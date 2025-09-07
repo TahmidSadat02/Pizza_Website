@@ -69,6 +69,28 @@ function is_admin() {
 }
 
 /**
+ * Get current logged in user information
+ * 
+ * @return array|null User data if logged in, null otherwise
+ */
+function getCurrentUser() {
+    if (!is_logged_in()) {
+        return null;
+    }
+    
+    global $pdo;
+    
+    try {
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE user_id = ?");
+        $stmt->execute([$_SESSION['user_id']]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        debug_log($e->getMessage(), 'getCurrentUser Error');
+        return null;
+    }
+}
+
+/**
  * Redirect to a specific page
  * 
  * @param string $location The location to redirect to
