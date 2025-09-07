@@ -131,6 +131,91 @@ if ($user) {
                 </div>
             </div>
 
+            <!-- News Banner Carousel -->
+            <div class="news-banner-container">
+                <div id="newsBanner" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="news-banner pizza-special">
+                                <div class="banner-content">
+                                    <div class="banner-icon">
+                                        <i class="fas fa-pizza-slice"></i>
+                                    </div>
+                                    <div class="banner-text">
+                                        <h4>🍕 New Margherita Supreme!</h4>
+                                        <p>Try our authentic Italian Margherita with fresh mozzarella & basil</p>
+                                    </div>
+                                    <div class="banner-price">
+                                        <span class="price">$16.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="news-banner weekend-deal">
+                                <div class="banner-content">
+                                    <div class="banner-icon">
+                                        <i class="fas fa-percentage"></i>
+                                    </div>
+                                    <div class="banner-text">
+                                        <h4>🎉 Weekend Special - 30% OFF!</h4>
+                                        <p>Get 30% discount on all pizza orders this weekend only</p>
+                                    </div>
+                                    <div class="banner-action">
+                                        <span class="code">Use: WEEKEND30</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="news-banner family-combo">
+                                <div class="banner-content">
+                                    <div class="banner-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div class="banner-text">
+                                        <h4>👨‍👩‍👧‍👦 Family Combo Deal</h4>
+                                        <p>2 Large Pizzas + 4 Drinks + Garlic Bread for just $39.99</p>
+                                    </div>
+                                    <div class="banner-price">
+                                        <span class="price">$39.99</span>
+                                        <span class="old-price">$55.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="news-banner free-delivery">
+                                <div class="banner-content">
+                                    <div class="banner-icon">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <div class="banner-text">
+                                        <h4>🚚 Free Delivery Zone Expanded!</h4>
+                                        <p>We now deliver to 5 new areas with FREE delivery on orders over $25</p>
+                                    </div>
+                                    <div class="banner-action">
+                                        <span class="code">Min Order: $25</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#newsBanner" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#newsBanner" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+
             <!-- Content Area -->
             <div class="content-area">
                 <!-- Discount Banner -->
