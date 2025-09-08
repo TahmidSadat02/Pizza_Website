@@ -32,6 +32,24 @@ if ($user) {
     $cart_stmt->execute([$user['user_id']]);
     $cart_count = $cart_stmt->fetchColumn() ?: 0;
 }
+
+// Get active banners for carousel
+$banners = [];
+try {
+    $now = date('Y-m-d H:i:s');
+    $banner_stmt = $pdo->prepare(
+        "SELECT * FROM banners 
+         WHERE is_active = 1 
+           AND (start_date IS NULL OR start_date <= ?) 
+           AND (end_date IS NULL OR end_date >= ?) 
+         ORDER BY position ASC, id DESC"
+    );
+    $banner_stmt->execute([$now, $now]);
+    $banners = $banner_stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    // Log error but don't break the page
+    debug_log($e->getMessage(), 'Banner fetch error');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -132,81 +150,50 @@ if ($user) {
             </div>
 
             <!-- News Banner Carousel -->
+            <?php if (!empty($banners)): ?>
             <div class="news-banner-container">
                 <div id="newsBanner" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                    <!-- Dynamic Indicators -->
                     <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="0" class="active"></button>
-                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="2"></button>
-                        <button type="button" data-bs-target="#newsBanner" data-bs-slide-to="3"></button>
+                        <?php for ($i = 0; $i < count($banners); $i++): ?>
+                            <button type="button" 
+                                    data-bs-target="#newsBanner" 
+                                    data-bs-slide-to="<?php echo $i; ?>" 
+                                    <?php echo $i === 0 ? 'class="active"' : ''; ?>></button>
+                        <?php endfor; ?>
                     </div>
+                    
+                    <!-- Dynamic Carousel Items -->
                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="news-banner pizza-special">
-                                <div class="banner-content">
-                                    <div class="banner-icon">
-                                        <i class="fas fa-pizza-slice"></i>
-                                    </div>
-                                    <div class="banner-text">
-                                        <h4>🍕 New Margherita Supreme!</h4>
-                                        <p>Try our authentic Italian Margherita with fresh mozzarella & basil</p>
-                                    </div>
-                                    <div class="banner-price">
-                                        <span class="price">$16.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="news-banner weekend-deal">
-                                <div class="banner-content">
-                                    <div class="banner-icon">
-                                        <i class="fas fa-percentage"></i>
-                                    </div>
-                                    <div class="banner-text">
-                                        <h4>🎉 Weekend Special - 30% OFF!</h4>
-                                        <p>Get 30% discount on all pizza orders this weekend only</p>
-                                    </div>
-                                    <div class="banner-action">
-                                        <span class="code">Use: WEEKEND30</span>
+                        <?php foreach ($banners as $index => $banner): ?>
+                            <div class="carousel-item <?php echo $index === 0 ? 'active' : ''; ?>">
+                                <?php if ($banner['link']): ?>
+                                    <a href="<?php echo htmlspecialchars($banner['link']); ?>" class="text-decoration-none">
+                                <?php endif; ?>
+                                
+                                <div class="news-banner dynamic-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<?php echo htmlspecialchars($banner['image_path']); ?>'); background-size: cover; background-position: center;">
+                                    <div class="banner-content">
+                                        <div class="banner-icon">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="banner-text">
+                                            <h4><?php echo htmlspecialchars($banner['title']); ?></h4>
+                                            <p>Limited time offer - Don't miss out!</p>
+                                        </div>
+                                        <div class="banner-action">
+                                            <span class="code">Order Now</span>
+                                        </div>
                                     </div>
                                 </div>
+                                
+                                <?php if ($banner['link']): ?>
+                                    </a>
+                                <?php endif; ?>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="news-banner family-combo">
-                                <div class="banner-content">
-                                    <div class="banner-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <div class="banner-text">
-                                        <h4>👨‍👩‍👧‍👦 Family Combo Deal</h4>
-                                        <p>2 Large Pizzas + 4 Drinks + Garlic Bread for just $39.99</p>
-                                    </div>
-                                    <div class="banner-price">
-                                        <span class="price">$39.99</span>
-                                        <span class="old-price">$55.99</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="news-banner free-delivery">
-                                <div class="banner-content">
-                                    <div class="banner-icon">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
-                                    <div class="banner-text">
-                                        <h4>🚚 Free Delivery Zone Expanded!</h4>
-                                        <p>We now deliver to 5 new areas with FREE delivery on orders over $25</p>
-                                    </div>
-                                    <div class="banner-action">
-                                        <span class="code">Min Order: $25</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php endforeach; ?>
                     </div>
+                    
+                    <!-- Carousel Controls -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#newsBanner" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </button>
@@ -215,6 +202,7 @@ if ($user) {
                     </button>
                 </div>
             </div>
+            <?php endif; ?>
 
             <!-- Content Area -->
             <div class="content-area">

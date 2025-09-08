@@ -119,6 +119,11 @@ $recent_orders = $stmt->fetchAll();
                             </a>
                         </div>
                         <div class="col-md-3 mb-3">
+                            <a href="manage_banners.php" class="btn btn-warning w-100">
+                                <i class="fas fa-images"></i> Manage Banners
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
                             <a href="../index.php" class="btn btn-secondary w-100">
                                 <i class="fas fa-home"></i> View Website
                             </a>

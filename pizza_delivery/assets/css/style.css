@@ -219,13 +219,31 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* Banner image handling: ensure visible area matches 1200x300 and is responsive */
+.carousel .carousel-item img.banner-img {
+    width: 100%;
+    max-width: 1200px;
+    height: 300px;
+    object-fit: cover; /* crop to fill */
+    object-position: center center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f8f8f8; /* visible area for padded images */
+}
+
+/* For very small images, center without upscaling (preserve image quality) */
+.carousel .carousel-item img.banner-img.small {
+    object-fit: contain;
+}
+
 .carousel {
     border-radius: 16px;
 }
 
 .news-banner {
     padding: 1.5rem 2rem;
-    min-height: 100px;
+    min-height: 480px;
     display: flex;
     align-items: center;
     position: relative;
@@ -263,6 +281,11 @@ body {
 
 .free-delivery {
     background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: white;
+}
+
+.dynamic-banner {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
     color: white;
 }
 
@@ -363,10 +386,10 @@ body {
 }
 
 .carousel-indicators button {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin: 0 4px;
+    width: 30px;
+    height: 4px;
+    border-radius: 2px;
+    margin: 0 3px;
     border: none;
     background: rgba(255,255,255,0.5);
     transition: all 0.3s ease;
@@ -374,7 +397,7 @@ body {
 
 .carousel-indicators button.active {
     background: white;
-    transform: scale(1.2);
+    width: 40px;
 }
 
 /* Right Sidebar */
@@ -856,7 +879,7 @@ body {
     /* News Banner Mobile Styles */
     .news-banner {
         padding: 1rem;
-        min-height: auto;
+        min-height: 320px;
     }
     
     .banner-content {
@@ -1568,4 +1591,40 @@ footer a:hover {
         margin: 20px;
         padding: 20px;
     }
+}
+
+/* Admin Area Navbar Styling */
+.navbar.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.navbar.bg-warning .navbar-brand,
+.navbar.bg-warning .nav-link {
+    color: #212529 !important;
+}
+
+.navbar.bg-warning .nav-link:hover {
+    color: #495057 !important;
+}
+
+.navbar.bg-warning .navbar-toggler {
+    border-color: #212529;
+}
+
+.navbar.bg-warning .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar.bg-warning .dropdown-menu {
+    border: 1px solid #212529;
+}
+
+.navbar.bg-warning .btn-outline-light {
+    border-color: #212529;
+    color: #212529;
+}
+
+.navbar.bg-warning .btn-outline-light:hover {
+    background-color: #212529;
+    color: #ffc107;
 }
