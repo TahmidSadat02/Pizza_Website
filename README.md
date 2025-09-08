@@ -2,7 +2,7 @@
 
 A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap. Features a beautiful GoMeal-inspired design with orange/yellow gradients and complete order management system.
 
-## 🌟 Features
+## Features
 
 ### Customer Features
 - **User Registration & Authentication** - Secure user accounts with password hashing
@@ -15,6 +15,7 @@ A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap
 ### Admin Features
 - **Admin Dashboard** - Overview of customers, orders, and food items
 - **Food Management** - Add, edit, and manage food items with image uploads
+- **Banner Management** - Add, edit, and manage promotional banners
 - **Order Management** - View and update order status
 - **User Management** - View registered customers
 - **Analytics** - Basic statistics and reporting
@@ -27,7 +28,6 @@ A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap
 - **Background White**: `#FFFFFF` - Clean, modern background
 - **Text Dark**: `#333333` - High contrast readability
 - **Success Green**: `#10B981` - Success states and confirmations
-
 ### UI/UX Highlights
 - Modern GoMeal-inspired three-column layout
 - Orange/yellow gradient theme with clean whites
@@ -36,7 +36,7 @@ A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap
 - Intuitive sidebar navigation
 - Professional food presentation with ratings
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Backend**: PHP 8.x
 - **Database**: MySQL
@@ -53,7 +53,7 @@ A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap
 - Web browser (Chrome, Firefox, Safari, Edge)
 - Git (for cloning)
 
-## 🚀 Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -81,17 +81,7 @@ A modern, responsive pizza delivery website built with PHP, MySQL, and Bootstrap
 5. **Access the Website**
    - Open browser and go to: `http://localhost/Pizza_Website/pizza_delivery/public/`
 
-## 🔐 Default Login Credentials
-
-### Admin Access
-- **Email**: `admin@example.com`
-- **Password**: `123456`
-
-### Test Customer
-- **Email**: `test@example.com`
-- **Password**: `123456`
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 pizza_delivery/
@@ -187,32 +177,3 @@ define('DB_NAME', 'pizza_delivery');
    - Clear browser cache
    - Check if CSS file path is correct
    - Verify Bootstrap CDN is loading
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👨‍💻 Author
-
-**Tahmid Sadat**
-- GitHub: [@TahmidSadat02](https://github.com/TahmidSadat02)
-
-## 🙏 Acknowledgments
-
-- Bootstrap team for the excellent CSS framework
-- Font Awesome for the beautiful icons
-- PHP community for the robust language features
-
----
-
-**Live Demo**: [Add your live demo link here]
-**Documentation**: [Add documentation link if available]
-**Support**: [Add support email or contact]
